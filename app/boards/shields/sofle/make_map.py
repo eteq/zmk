@@ -44,28 +44,28 @@ full_keymap_file_template = """
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_left_right: behavior_mouse_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_LEFT>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_scroll_up_down: behavior_mouse_scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_scroll_left_right: behavior_mouse_scroll_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
     };
 
@@ -104,8 +104,8 @@ map_template = """
 """[1:-1]
 
 sensor_bindings = { None: 'sensor-bindings = <&mouse_left_right &mouse_up_down>;',
-                    'lower': 'sensor-bindings = <&vol_encoder &rgb_encoder>;',
-                    'raise': 'sensor-bindings = <&mouse_scroll_up_down &mouse_scroll_left_right>;'}
+                    'adjust': 'sensor-bindings = <&rgb_encoder &vol_encoder>;',
+                    'raise': 'sensor-bindings = <&mouse_scroll_left_right &mouse_scroll_up_down>;'}
 
 def make_map_str(infn, template=map_template):
     ss = []
