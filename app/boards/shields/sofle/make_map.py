@@ -16,7 +16,7 @@ full_keymap_file_template = """
 #include <dt-bindings/zmk/outputs.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500//600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 200//10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100//10
 
 #include <dt-bindings/zmk/mouse.h>
 
@@ -49,7 +49,7 @@ full_keymap_file_template = """
         mouse_up_down: behavior_mouse_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
+            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_UP>;
             tap-ms = < 25 >;
         };
 
@@ -63,7 +63,7 @@ full_keymap_file_template = """
         mouse_scroll_up_down: behavior_mouse_scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
             tap-ms = < 25 >;
         };
 
@@ -125,9 +125,9 @@ map_template = """
         }};
 """[1:-1]
 
-sensor_bindings = { None: 'sensor-bindings = <&mouse_left_right &mouse_up_down>;',
+sensor_bindings = { None: 'sensor-bindings = <&mouse_up_down &mouse_left_right>;',
                     'adjust': 'sensor-bindings = <&rgb_encoder &vol_encoder>;',
-                    'raise': 'sensor-bindings = <&mouse_scroll_left_right &mouse_scroll_up_down>;'}
+                    'raise': 'sensor-bindings = <&mouse_scroll_up_down &mouse_scroll_left_right>;'}
 
 def make_map_str(infn, template=map_template):
     ss = []
