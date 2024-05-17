@@ -63,6 +63,22 @@
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
             tap-ms = < 25 >;
         };
+
+
+        tdrshiftcaps: tap_dance_caps_r {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHIFT>, <&kp RSHIFT>, <&kp CAPSLOCK>;
+        };
+
+
+        tdlshiftcaps: tap_dance_caps_l {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPSLOCK>;
+        };
     };
 
    // Activate ADJUST layer by pressing raise and lower
@@ -85,7 +101,7 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS 
 &kp ESC &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSPC 
 &kp TAB &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI &kp SQT 
-&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &mkp LCLK &mkp RCLK &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
+&tdlshiftcaps &kp Z &kp X &kp C &kp V &kp B &mkp LCLK &mkp RCLK &kp N &kp M &kp COMMA &kp DOT &kp FSLH &tdrshiftcaps 
 &kp LCTRL &kp LALT &mo LOWER &kp SPACE &kp LGUI &kp RGUI &kp RET &mo RAISE &kp RALT &kp RCTRL 
 
             >;
