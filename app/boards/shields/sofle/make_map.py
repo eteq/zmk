@@ -67,6 +67,22 @@ full_keymap_file_template = """
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
             tap-ms = < 25 >;
         };
+
+
+        tdrshiftcaps: tap_dance_caps_r {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHIFT>, <&kp RSHIFT>, <&kp CAPSLOCK>;
+        };
+
+
+        tdlshiftcaps: tap_dance_caps_l {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPSLOCK>;
+        };
     };
 
    // Activate ADJUST layer by pressing raise and lower
