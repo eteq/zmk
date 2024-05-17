@@ -40,28 +40,28 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_left_right: behavior_mouse_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_LEFT>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_scroll_up_down: behavior_mouse_scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
 
         mouse_scroll_left_right: behavior_mouse_scroll_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = < 20 >;
+            tap-ms = < 25 >;
         };
     };
 
@@ -100,12 +100,12 @@
 &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp EQUAL 
 &none &none &none &mmv MOVE_UP &none &none &kp HOME &none &none &kp F11 &kp F12 &none 
 &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &kp PG_UP &none &none &none &none &none 
-&trans &none &mkp LCLK &mkp MCLK &mkp RCLK &none &kp C_MUTE &rgb_ug RGB_TOG &kp PG_DN &none &kp LEFT_BRACKET &kp RIGHT_BRACKET &none &trans 
+&trans &none &mkp LCLK &mkp MCLK &mkp RCLK &none &mkp LCLK &mkp RCLK &kp PG_DN &none &kp LEFT_BRACKET &kp RIGHT_BRACKET &none &trans 
 &trans &trans &trans &none &none &none &kp END &trans &trans &trans 
 
             >;
 
-            sensor-bindings = <&vol_encoder &rgb_encoder>;
+            sensor-bindings = <&mouse_left_right &mouse_up_down>;
         };
 
         raise_layer {
@@ -120,7 +120,7 @@
 
             >;
 
-            sensor-bindings = <&mouse_scroll_up_down &mouse_scroll_left_right>;
+            sensor-bindings = <&mouse_scroll_left_right &mouse_scroll_up_down>;
         };
 
         adjust_layer {
@@ -130,12 +130,12 @@
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &soft_off 
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF &none &none &none &none &none &soft_off 
 &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_EFR &none &none &none &none &none &soft_off 
-&none &none &none &none &none &none &none &none &none &none &none &none &none &soft_off 
+&none &none &none &none &none &none &rgb_ug RGB_TOG &kp C_MUTE &none &none &none &none &none &soft_off 
 &none &none &out OUT_USB &out OUT_BLE &none &none &none &none &none 
 
             >;
 
-            sensor-bindings = <&mouse_left_right &mouse_up_down>;
+            sensor-bindings = <&rgb_encoder &vol_encoder>;
         };
 
 
