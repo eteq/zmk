@@ -25,6 +25,12 @@ full_keymap_file_template = """
 #define RAISE 2
 #define ADJUST 3
 
+
+&sl {
+    release-after-ms = <3000>;
+    /delete-property/ quick-release;
+};
+
 / {
 
     behaviors {
