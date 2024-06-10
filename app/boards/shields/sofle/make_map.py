@@ -15,7 +15,7 @@ full_keymap_file_template = """
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2500//600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 8000//800
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100//10
 
 #include <dt-bindings/zmk/mouse.h>
@@ -27,7 +27,7 @@ full_keymap_file_template = """
 
 
 &sl {
-    release-after-ms = <3000>;
+    release-after-ms = <500>;
     /delete-property/ quick-release;
 };
 
@@ -125,9 +125,9 @@ map_template = """
         }};
 """[1:-1]
 
-sensor_bindings = { None: 'sensor-bindings = <&mouse_up_down &mouse_left_right>;',
+sensor_bindings = { None: 'sensor-bindings = <&mouse_left_right &mouse_up_down>;',
                     'adjust': 'sensor-bindings = <&rgb_encoder &vol_encoder>;',
-                    'raise': 'sensor-bindings = <&mouse_scroll_up_down &mouse_scroll_left_right>;'}
+                    'raise': 'sensor-bindings = <&mouse_scroll_left_right &mouse_scroll_up_down>;'}
 
 def make_map_str(infn, template=map_template):
     ss = []
