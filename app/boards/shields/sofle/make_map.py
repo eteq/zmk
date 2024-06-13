@@ -31,6 +31,11 @@ full_keymap_file_template = """
     /delete-property/ quick-release;
 };
 
+
+&soft_off {
+    hold-time-ms = <1200>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
 
     behaviors {
@@ -49,7 +54,7 @@ full_keymap_file_template = """
         mouse_up_down: behavior_mouse_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_UP>;
+            bindings = <&mmv MOVE_UP>, <&mmv MOVE_DOWN>;
             tap-ms = < 25 >;
         };
 
@@ -63,7 +68,7 @@ full_keymap_file_template = """
         mouse_scroll_up_down: behavior_mouse_scroll_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = < 25 >;
         };
 
@@ -125,9 +130,9 @@ map_template = """
         }};
 """[1:-1]
 
-sensor_bindings = { None: 'sensor-bindings = <&mouse_left_right &mouse_up_down>;',
+sensor_bindings = { None: 'sensor-bindings = <&mouse_up_down &mouse_left_right>;',
                     'adjust': 'sensor-bindings = <&rgb_encoder &vol_encoder>;',
-                    'raise': 'sensor-bindings = <&mouse_scroll_left_right &mouse_scroll_up_down>;'}
+                    'raise': 'sensor-bindings = <&mouse_scroll_up_down &mouse_scroll_left_right>;'}
 
 def make_map_str(infn, template=map_template):
     ss = []
