@@ -33,7 +33,7 @@ full_keymap_file_template = """
 
 
 &soft_off {
-    hold-time-ms = <1200>; // Only turn off it the key is held for 5 seconds or longer.
+    hold-time-ms = <1500>; // Only turn off it the key is held for these milliseconds or longer.
 };
 
 / {
