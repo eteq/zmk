@@ -1,0 +1,44 @@
+    1  ls
+    2  cd app
+    3  cd ..
+    4  west init -l app
+    5  west update
+    6  cdapp
+    7  cd app
+    8  ls
+    9  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   10  exit
+   11  ls
+   12  cd app
+   13  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   14  rm
+   15  rm -rf build
+   16  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   17  rm -rf build
+   18  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   19  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   20  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   21  cd aoo
+   22  cd app
+   23  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   24  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   25  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   26  lls
+   27  ld
+   28  ls
+   29  cd aoo
+   30  cd app
+   31  ls
+   32  lss
+   33  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   34  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   35  ls
+   36  ls
+   37  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   38  cd app
+   39  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right
+   40  west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   41  history > ../container_history
+   42  cat ../container_history 
+   43  west build -d build/right -b nice_nano_v2 -- -DSHIELD=sofle_right;west build -d build/left -b nice_nano_v2 -- -DSHIELD=sofle_left
+   44  history > ../container_history
