@@ -124,11 +124,11 @@
             display-name = "lower";
 
             bindings = <
-&soft_off &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp EQUAL 
+&none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp EQUAL 
 &none &none &none &mmv MOVE_UP &none &none &none &none &none &kp F11 &kp F12 &kp DEL 
-&none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none &none &none &none &none &kp BACKSLASH 
-&trans &none &mkp LCLK &mkp MCLK &mkp RCLK &none &mkp LCLK &mkp RCLK &none &none &kp LEFT_BRACKET &kp RIGHT_BRACKET &none &trans 
-&trans &trans &trans &trans &trans &kp RGUI &trans &trans &trans &trans 
+&soft_off &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none &none &none &none &none &kp PIPE 
+&trans &none &mkp LCLK &mkp MCLK &mkp RCLK &none &mkp LCLK &mkp RCLK &none &none &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &trans 
+&trans &trans &trans &trans &kp RGUI &trans &trans &trans &trans &trans 
 
             >;
 
@@ -141,9 +141,9 @@
             bindings = <
 &kp PSCRN &none &none &none &none &kp HOME &kp KP_NUM &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &none &kp EQUAL 
 &kp PAUSE_BREAK &none &none &kp UP &none &kp PG_UP &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS &kp INS &kp DEL 
-&none &none &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &none &kp BACKSLASH 
-&trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp END &none &none &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &none &trans 
-&trans &trans &none &trans &trans &kp RGUI &trans &trans &kp KP_N0 &kp KP_N0 
+&none &none &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &none &kp PIPE 
+&trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp END &none &none &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &kp BACKSLASH &trans 
+&trans &trans &trans &trans &kp RGUI &trans &trans &trans &trans &kp KP_N0 
 
             >;
 
@@ -158,7 +158,7 @@
 &rgb_ug RGB_TOG &rgb_ug RGB_BRI &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_SPI &rgb_ug RGB_EFF &out OUT_USB &out OUT_BLE &none &none &none &none 
 &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_SPD &rgb_ug RGB_EFR &out OUT_USB &out OUT_BLE &none &none &none &none 
 &rgb_ug RGB_TOG &none &none &none &none &none &rgb_ug RGB_TOG &kp C_MUTE &out OUT_USB &out OUT_BLE &none &none &none &none 
-&none &none &none &none &ext_power EP_TOG &ext_power EP_TOG &none &none &none &none 
+&none &none &none &none &none &none &none &none &none &ext_power EP_TOG 
 
             >;
 
