@@ -34,6 +34,7 @@ full_keymap_file_template = """
 
 &soft_off {
     hold-time-ms = <1500>; // Only turn off it the key is held for these milliseconds or longer.
+    /delete-property/ split-peripheral-off-on-press;
 };
 
 / {
