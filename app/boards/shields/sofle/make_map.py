@@ -12,7 +12,7 @@ full_keymap_file_template = """
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/ext_power.h> 
 #include <dt-bindings/zmk/outputs.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 8000//800
@@ -70,14 +70,14 @@ full_keymap_file_template = """
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = < 25 >;
+            tap-ms = < 250 >;
         };
 
         mouse_scroll_left_right: behavior_mouse_scroll_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-            tap-ms = < 25 >;
+            tap-ms = < 250 >;
         };
 
 
